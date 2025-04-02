@@ -44,7 +44,7 @@ resource "aws_route" "internet" {
   gateway_id       = "${aws_internet_gateway.igw.id}"
 }
 
-# Associate Route Table to Public Sunet
+# Associate Route Table to Public Subnet
 resource "aws_route_table_association" "subnet_association" {
   subnet_id = "${aws_subnet.public_subnet.id}"
   route_table_id = "${aws_route_table.route-table.id}"
